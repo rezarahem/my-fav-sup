@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.425.0",
     "@prisma/client": "^5.3.1",
+    "aws-sdk": "^2.1470.0",
     "next": "13.5.4",
     "prisma": "^5.3.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,6 +1,9 @@
+import NavBar from '@/components/NavBar';
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -12,6 +15,7 @@ const myFont = localFont({
   variable: '--font-dana',
   display: 'swap',
 });
+
 export default function RootLayout({
   children,
 }: {
@@ -19,7 +23,13 @@ export default function RootLayout({
 }) {
   return (
     <html dir='rtl' lang='fa' className={`${myFont.variable} font-sans`}>
-      <body>{children}</body>
+      <body>
+        <NavBar />
+        {children}
+        <div dir='ltr'>
+          <Toaster position='bottom-left' />
+        </div>
+      </body>
     </html>
   );
 }

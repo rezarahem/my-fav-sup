@@ -7,18 +7,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model List {
-  id       Int    @id @default(autoincrement())
-  userName String
+// model List {
+//   id       Int    @id @default(autoincrement())
+//   userName String
 
-  hero Hero[]
-}
+//   hero Hero[]
+// }
 
 model Hero {
   id       Int    @id @default(autoincrement())
   supName  String
   supImage String
 
-  list   List? @relation(fields: [listId], references: [id])
-  listId Int?
+  // list   List? @relation(fields: [listId], references: [id])
+  // listId Int?
 }
