@@ -14,8 +14,7 @@ export default async function HeroList() {
               alt={hero.supName}
               src={hero.supImage}
               fill={true}
-              objectFit='cover'
-              placeholder='data:image/supimage.jpg'
+              style={{ objectFit: 'cover' }}
             />
           </div>
         </div>
