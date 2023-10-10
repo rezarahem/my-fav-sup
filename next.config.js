@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'supimage.storage.iran.liara.space',
+        hostname: 'sup.storage.iran.liara.space',
       },
     ],
   },

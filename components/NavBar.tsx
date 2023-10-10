@@ -20,7 +20,7 @@ export default function NavBar() {
         اضابه کردن هیرو
       </button>
 
-      <Link href='/' className='text-3xl font-bold'>
+      <Link href='/'>
         <Image src='/sup.png' alt='super-hero' height={50} width={50} />
       </Link>
 

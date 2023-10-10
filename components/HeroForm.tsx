@@ -40,9 +40,10 @@ export default function HeroForm() {
     const result = await CreateHero(formData);
 
     if (result?.success) {
-      toast.success(`${supName} اضافه شد`);
-
-      setTimeout(() => resetStates(), 1000);
+      setTimeout(() => {
+        toast.success(`${supName} اضافه شد`);
+        resetStates();
+      }, 1500);
     }
   };
 
@@ -61,10 +62,9 @@ export default function HeroForm() {
         <div className='flex justify-center items-center w-full h-14 rounded relative overflow-hidden'>
           <Image
             src={isImagePath}
-            alt='supImage'
+            alt='superhero-image'
             fill={true}
-            objectFit='cover'
-            placeholder='data:image/supimage.jpg'
+            style={{ objectFit: 'cover' }}
           />
           <MdLibraryAddCheck className='text-2xl text-green-400 shadow-xl z-50' />
         </div>

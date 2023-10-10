@@ -28,11 +28,11 @@ export async function s3UploadAction(data: FormData) {
     await s3.send(new PutObjectCommand(params));
     return {
       success: true,
-      imagePath: `https://supimage.storage.iran.liara.space/${supImage}`,
+      imagePath: `https://sup.storage.iran.liara.space/${supImage}`,
     };
-  } catch (err) {
+  } catch (error) {
     return {
-      error: err,
+      error,
     };
   }
 }
