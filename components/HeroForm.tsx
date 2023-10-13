@@ -23,6 +23,7 @@ export default function HeroForm() {
 
   const uploadImage: ChangeEventHandler<HTMLInputElement> = async (e) => {
     const data = new FormData();
+    // data.set('file', e.target.files[0]) as File;
     data.set('file', e.target.files![0]);
     const result = await s3UploadAction(data);
 
